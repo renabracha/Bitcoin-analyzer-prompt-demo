@@ -2,7 +2,7 @@ import os
 import requests
 import json
 import streamlit as st
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from groq import Groq
 from dotenv import load_dotenv
 
@@ -25,9 +25,12 @@ def generate_response(prompt):
 # Get Bitcoin Price From the last 24 hours using Coinpaprika API
 def GetBitCoinPrices():
 
-    # Calculate timestamp 24 hours ago in the required format
-    start_time = (datetime.utcnow() - timedelta(hours=24)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    # Calculate timestamp 24 hour and 5 minuites s ago in the required format.
+    # Requesting data from less than 24 hours ago to be on the safe side 
+    # due to the slight time difference between the API source and my location
+    start_time = (datetime.now(timezone.utc) - timedelta(hours=23, minutes=55)).strftime('%Y-%m-%dT%H:%M:%SZ')
 
+    
     # Define the API endpoint and query parameters
     url = "https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical"
     params = {
@@ -73,7 +76,7 @@ def AnalyseBitCoin(bitcoinPrices):
     return message
 
 
-st.title('Crypto Price Analysis with Prompt Engineering')
+st.title('Bitcoin Price Analysis with Prompt Engineering')
 
 if st.button('Analyse'):
     try:
