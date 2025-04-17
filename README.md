@@ -32,11 +32,13 @@ If you get an error or "Python is not recognized", you need to install Python:
 ### Step 3. Set up a virtual environment. 
 This keeps your project dependencies isolated:
 1. In the Command Prompt window, go to the script folder. Type:<br>
-	`cd c:\<path to your script folder>`
+	`cd C:\<path to your script folder>`
 2. In the Command Prompt, create a Python virtual environment named `bitcoin_env`.<br>
 	`python -m venv bitcoin_env`
 3. In the Command Prompt, activate the Python virtual environment.<br>
 	`bitcoin_env\Scripts\activate`
+4. Install the required dependencies.<br>
+  `pip install -r requirements.txt`
 
 ### Step 4. Install the required packages. 
 1. In the Command Prompt window, type:<br>
