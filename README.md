@@ -1,10 +1,17 @@
 # Bitcoin Analyzer
 
-This is a little demonstration that prompting is enough to build a Web app that analyses real-time historical Bitcoin prices and advises you whether or not to buy, with no need to build an Agent with heavy programming. 
+## Acknowledgment
+This is my very first project through which I have taken the initial step toward transitioning from classical machine learning to large language models. I would like to thank the following individuals and organisations that made this project possible. 
+* Rahul Bhandari for giving me the a-ha! moment with his Bitcoin-analyzer-with-prompts project (https://github.com/rahul-0000-code/) by showing me how to turn my hazy feeling about the possibility of creating a Python program only with prompt engineering techniques into a practical viability. 
+* Groq for providing me free access to their API key and thereby allowing me to gain hands-on experience in making API calls without having to constantly worry about token limits.
 
-The data on Bitcoin prices is being pulled from Coin Paprika using a free API. This extremely limits the volume of data that I am able to obtain. Increasing the volume of data that can be fed into the model will obviously improve the quality of its output. Again, this is only a demonstration for the power of prompting. 
+## Abstract
+The project showcases how well-crafted prompting is sufficient to build a Web app that analyses real-time historical Bitcoin prices and advises you whether or not to buy, with no need to build an Agent with heavy programming.
 
+## Challenges
+Finding a free API key was the part that took the longest while working in this project. The data on Bitcoin prices is being pulled from Coin Paprika using a free API. While I wished I could receive a 7-day backlog of day, I could only get two figures from the last 24-hour period, which was extremely liming. Increasing the volume of data that can be fed into the model will obviously improve the quality of its output. The purpose of the project, however, was to serve as a proof of concept demonstrating that prompt engineering can go a long way — and it succeeded.
 
+# Installation
 To run bitcoin_analyzer.py, do the following:
 
 ### Step 1. Place the files in a folder. 
