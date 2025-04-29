@@ -10,7 +10,7 @@ The project showcases how well-crafted prompting is sufficient to build a Web ap
 
 ## Development Notes
 * Streamlit made the building of a Web app simple. I could ready a Web app interface with a few lines of fairly intuitive code. 
-* This is the first project in which I pulled live data using an API key. I was pleasantly surpised how uncomplicated it was. 
+* This is the first project in which I pulled live data using an API key. I was pleasantly surprised how uncomplicated it was. 
 
 ## Challenges
 Finding a free API key was the part that took the longest while working in this project. The data on Bitcoin prices is being pulled from Coin Paprika using a free API. While I wished I could receive a 7-day backlog to date, I could only get two figures from the last 24-hour period, which was extremely liming. Increasing the volume of data that can be fed into the model will obviously improve the quality of its output. The purpose of the project, however, was to serve as a proof of concept demonstrating that prompt engineering can go a long way — and it succeeded.
